@@ -1,0 +1,680 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+.navbar {
+    width: 100%;
+    padding: 17px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:white;
+
+    position: fixed;     
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.search-container {
+    position: relative;
+}
+#searchIcons {
+    position: absolute;
+    top: 10px;
+    right: 250px;
+}
+
+#search-icon {
+    font-size: 23px;
+    cursor: pointer;
+
+}
+.input-search{
+
+    
+}
+
+.search-bar {
+    width: 724px;
+    position: absolute;
+    background-color:#e4e2e2;
+    top: 5px;
+    right: 190px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid black;
+   
+}
+
+.search-bar input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background-color: #e4e2e2;
+
+    font-size: 18px;
+}
+
+
+
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #7d2dbb;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #444;
+    font-size: 15px;
+}
+
+.icons i {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    z-index: 2000;
+}
+
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 40vh;
+    background: #111;
+    padding-top: 60px;
+   
+    z-index: 1500;
+}
+
+.side-menu a {
+    display: block;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.side-menu a:hover {
+    background: #444242;
+    padding-left: 30px;
+   
+}
+
+
+#menuToggle:checked ~ .side-menu {
+    right: 0;
+    background-color: white;
+}
+
+
+.over {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+
+#menuToggle:checked ~ .over {
+    display: block;
+}
+
+
+
+.hero {
+    background: #0d0d0d;
+    padding: 200px 80px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.fastrack-watch{
+  width: 100%;
+  height: 100%;
+ font-size: 20px;
+ background-color:white;
+ 
+}
+ .store h3{
+    
+   font-size: 40px;
+}
+.row{
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.col{
+   flex: 0 0 calc(33.33% - 90px);
+    margin-top: 120px;
+    margin-bottom: 180px;
+    border: 2px solid #d7d7d7; 
+    height: 320px;
+  
+
+}
+
+ .col img{
+   
+    margin-top: 40px  ;
+    margin-left: 90px;
+    object-fit: contain;
+    justify-content: center;
+    text-align: center;
+}
+.product-button{
+    display: flex;
+   justify-content: center;
+   
+}
+.product-button button{
+    background-color: #7d2dbb;
+    padding: 15px;
+    width: 130px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.col:hover {
+    border-color: #7b2cbf;    
+    transform: translateY(-10px); 
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2); 
+    flex: 0 0 calc(33.33% - 90px);
+    margin-top: 120px;
+    margin-bottom: 120px;
+    border: 2px solid #d7d7d7;
+    height: 520px;
+    transition: 0.5s ease;   
+    overflow: hidden;
+    cursor: pointer;
+   
+}
+.hover-buttons {
+    position: absolute;
+    bottom: 36%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+    flex-direction: column;
+    gap: 8px;
+    
+    
+}
+.hover-buttons .add-cart {
+    background-color:white;
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.hover-buttons .shop-now{
+    background-color: rgb(230, 72, 214);
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px;
+}
+.shop-now:hover{
+    background-color: white;
+}
+
+.right-icons {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+   
+    
+}
+.right-icons i{
+border:solid 2px rgb(150, 149, 149);
+font-size: 25px;
+padding: 10px;
+}
+.hover-buttons,
+.right-icons {
+    display: none;
+}
+.col:hover .hover-buttons,
+.col:hover .right-icons {
+    display: flex;
+      
+}
+
+.col img {
+    margin-top: 40px;
+    margin-left: 90px;
+    object-fit: contain;
+    transition: 0.3s ease; 
+}
+
+.col:hover img {
+    transform: scale(1.1);
+}
+
+
+
+.watch{
+  width: 100%;
+  height: 100%;
+  background-color:white;
+  
+ 
+}
+.watch-sell{
+  
+   margin-left: 100px;
+   padding-top: 50px;
+  
+}
+.row{
+  display: flex;
+   
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center;
+}
+.col{
+   flex: 0 0 calc(33.33% - 90px);
+    margin-top: 120px;
+    border: 2px solid #d7d7d7; 
+    height: 320px;
+  
+
+}
+ .col img{
+    margin-top: 80px;
+    object-fit: contain;
+}
+.features-row {
+    display: flex;
+  width: 30%;
+   
+
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 0;
+    background: #f8f8f8;
+    
+}
+
+.feature-box {
+    width: 20%;
+}
+
+.feature-box i {
+    font-size: 55px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.feature-box p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.6;
+}
+.footer {
+    background: #050505;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo h2 {
+    font-size: 35px;
+    font-weight: 600;
+    color: #8e3996;;
+    margin-bottom: 30px;
+    background-color: white;
+    width: 150px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-col ul li {
+    list-style: none;
+    margin-bottom: 18px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #6a3f3f;
+}
+.vertical-line {
+    width: 1px;          
+    height: 100px;       
+    background: #585858;    
+}
+.footer-col p {
+    color: #ccc;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.social-icons a {
+    margin-right: 12px;
+    font-size: 20px;
+    color: #ccc;
+     border: 2px solid rgb(177, 44, 164);
+      padding: 5px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+
+.newsletter {
+    display: flex;
+    margin-top: 10px;
+     border: 2px solid #962a96; 
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 65%;
+    border: none;
+    outline: none;
+  
+    background-color: black;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: #a236b0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: 0.3s;
+}
+
+.newsletter button:hover {
+    background: #8a5ad6;
+}
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .hero {
+        padding: 180px 40px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .row .col {
+        flex: 0 0 calc(33.33% - 40px);
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .col img {
+        margin-left: 0;
+        display: block;
+        margin: 50px auto 20px;
+        width: 150px;
+    }
+
+    .feature-box {
+        width: 30%;
+        text-align: center;
+    }
+
+    .footer-row {
+        flex-wrap: wrap;
+    }
+
+    .footer-col {
+        flex: 45%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px 25px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 150px 25px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .row .col {
+        flex: 0 0 calc(50% - 30px);
+        height: auto;
+    }
+
+    .col img {
+        width: 130px;
+        margin-top: 40px;
+    }
+
+    .feature-box {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .row .col {
+        flex: 0 0 100%;
+        height: auto;
+    }
+
+    .col img {
+        width: 120px;
+    }
+
+    .watch-sell,
+    .store h3 {
+        text-align: center;
+        margin-left: 0;
+        font-size: 30px;
+    }
+
+    .feature-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .features {
+        padding: 60px 0;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-logo h2 {
+        font-size: 28px;
+    }
+
+    .footer-col {
+        flex: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 320px) {
+
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 110px 15px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .row .col {
+        flex: 0 0 100%;
+    }
+
+    .col img {
+        width: 100px;
+    }
+
+    .feature-box h3 {
+        font-size: 18px;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        font-size: 14px;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
+    }
+
+     .vertical-line{
+        display: none;
+     }
+
+
+}
